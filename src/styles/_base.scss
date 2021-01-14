@@ -1,0 +1,85 @@
+$primary: #056cf2;
+$primary_hover: hsl(208, 100%, 40%);
+$dark: #262626;
+$black: #2c2f34;
+$secondary: #0cc8f2;
+$secondary_hover: hsl(25, 94%, 58%);
+// $background: #303a40;
+$background: #25343c;
+$light: #ccc;
+$lightBackground: #0cc8f2;
+$lightgreen: #12908e;
+$lightgreen_hover: hsl(179, 78%, 27%);
+$green_cover: rgba(18, 144, 142, 0.9);
+$white: #f7f7f7;
+$maxWidth: 1200px;
+$xs: 360px;
+$sm: 576px;
+$md: 768px;
+$lg: 1025px;
+$textShadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+$boxShadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+$quickland: 'Quicksand', sans-serif;
+$ff1: 'Montserrat', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+body {
+  font-family: $ff1;
+  background: url('../assets/background.svg') no-repeat 100% 100% / cover;
+  padding: 40px 50px;
+  height: 100vh;
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $lightBackground;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $primary;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $primary_hover;
+  }
+}
+
+.btn {
+  border: none;
+  width: fit-content;
+  background-color: $dark;
+  color: $white;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.btn:hover {
+  background-color: $black;
+}

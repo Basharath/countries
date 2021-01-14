@@ -1,0 +1,120 @@
+.country {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: $white;
+    padding-top: 20px;
+  }
+
+  .info {
+    display: flex;
+    line-height: 1.5;
+
+    .flag {
+      display: inline-block;
+      padding-top: 10px;
+      img {
+        width: 300px;
+        max-height: 180px;
+        object-fit: contain;
+      }
+      margin-right: 20px;
+    }
+
+    .label {
+      font-weight: 500;
+      color: $dark;
+    }
+
+    .text-info {
+      width: 400px;
+      line-height: 1.5;
+      font-weight: 300;
+      color: #111;
+
+      .borders {
+        display: flex;
+        flex-wrap: wrap;
+        .border {
+          cursor: pointer;
+          color: $primary;
+          &:hover {
+            color: $dark;
+          }
+
+          &::after {
+            content: ',';
+            color: $dark;
+          }
+        }
+
+        .border:last-child::after {
+          content: '';
+        }
+      }
+
+      .btn {
+        margin-top: 10px;
+      }
+
+      .more-info {
+        display: none;
+      }
+
+      .more-info.show {
+        display: block;
+      }
+    }
+
+    @media (max-width: $lg) {
+      flex-direction: column;
+      align-items: center;
+
+      width: 100%;
+      margin: 10px 20px;
+
+      .flag {
+        padding: 0;
+
+        img {
+          width: 300px;
+          height: 180px;
+        }
+      }
+      .text-info {
+        width: 300px;
+        padding-left: 20px;
+      }
+    }
+
+    @media (max-width: $sm) {
+      margin: 10px 20px;
+
+      .flag {
+        img {
+          width: 230px;
+          height: 100px;
+        }
+      }
+      .text-info {
+        width: 250px;
+        padding-top: 10px;
+      }
+    }
+  }
+
+  @media (max-width: $lg) {
+    .title {
+      font-size: 2rem;
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
