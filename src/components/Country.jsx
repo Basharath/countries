@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function Country({ singleCountry = '', allCountries }) {
   const [country, setCountry] = useState(singleCountry);
-  const [show, setShow] = useState('false');
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     setCountry(singleCountry);
@@ -89,7 +89,7 @@ export default function Country({ singleCountry = '', allCountries }) {
               </div>
 
               <div className="btn" onClick={() => setShow(!show)}>
-                {show ? 'Hide info' : 'See more info'}
+                {!show ? 'See more info' : 'Hide info'}
               </div>
             </div>
           </div>

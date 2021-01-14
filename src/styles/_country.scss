@@ -30,6 +30,7 @@
     .label {
       font-weight: 500;
       color: $dark;
+      padding-right: 5px;
     }
 
     .text-info {
@@ -80,7 +81,7 @@
       margin: 10px 20px;
 
       .flag {
-        padding: 0;
+        padding: 5px;
 
         img {
           width: 300px;
@@ -89,17 +90,16 @@
       }
       .text-info {
         width: 300px;
-        padding-left: 20px;
+        padding-left: 10px;
       }
     }
 
     @media (max-width: $sm) {
-      margin: 10px 20px;
-
       .flag {
+        padding: 0 10px;
         img {
-          width: 230px;
-          height: 100px;
+          width: 250px;
+          height: 150px;
         }
       }
       .text-info {
