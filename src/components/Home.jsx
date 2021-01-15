@@ -4,6 +4,8 @@ import axios from 'axios';
 
 import Country from './Country';
 import config from '../config.json';
+import Loader from './Loader';
+import Sidebar from './Sidebar';
 
 export default function Home() {
   const [searchText, setSearchText] = useState('');
@@ -24,6 +26,15 @@ export default function Home() {
 
   const handleChange = async ({ currentTarget }) => {
     setSearchText(currentTarget.value);
+  };
+
+  const handleClearText = () => {
+    setSearchText('');
+  };
+
+  const handleClick = (c) => {
+    setCountry(c);
+    if (window.innerWidth < 500) setSearchText('');
   };
 
   const getCountries = () => {
@@ -48,73 +59,21 @@ export default function Home() {
   const countries = getCountries();
 
   return (
-    <div className="dashboard">
-      <div
-        className="sidebar"
-        style={searchText ? { overflowY: 'scroll' } : {}}
-      >
-        <div className="search-box">
-          <input
-            type="text"
-            placeholder="Search any country..."
-            onChange={handleChange}
-            value={searchText}
-          />
-          <span
-            className={'clear-btn' + (searchText ? ' show' : '')}
-            onClick={() => setSearchText('')}
-          >
-            <i className="fas fa-times"></i>
-          </span>
-        </div>
-        <div className={'content' + (searchText ? ' show' : '')}>
-          {!allCountries ? (
-            <div className="loader">
-              <div className="loadingio-spinner-double-ring-mvtk8gmmk4">
-                <div className="ldio-l37ix2s2sxs">
-                  <div></div>
-                  <div></div>
-                  <div>
-                    <div></div>
-                  </div>
-                  <div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ) : countries.length === 0 ? (
-            <div className="empty-search">No such country is found...</div>
-          ) : (
-            countries.map((c, idx) => (
-              <div className="country-row" key={idx}>
-                <div className="flag">
-                  <img
-                    src={c.flag}
-                    alt={c.name}
-                    onClick={() => setCountry(c)}
-                    title={c.name}
-                  />
-                </div>
-                <div className="details">
-                  <div
-                    className="title"
-                    title={c.name}
-                    onClick={() => setCountry(c)}
-                  >
-                    {c.name}
-                  </div>
-                  <div className="capital" title={c.capital}>
-                    {c.capital}
-                  </div>
-                </div>
-              </div>
-            ))
-          )}
-        </div>
+    <div className={'dashboard' + (searchText ? ' show' : '')}>
+      <div className={'sidebar'}>
+        <Sidebar
+          handleChange={handleChange}
+          countries={countries}
+          searchText={searchText}
+          allCountries={allCountries}
+          handleClick={handleClick}
+          handleClearText={handleClearText}
+        />
       </div>
       <div className="main">
-        {country && (
+        {!country ? (
+          <Loader />
+        ) : (
           <Country singleCountry={country} allCountries={allCountries} />
         )}
       </div>
