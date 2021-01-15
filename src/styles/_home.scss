@@ -112,6 +112,15 @@
       border-bottom: 1px solid $light;
       padding: 10px;
 
+      &:hover {
+        background: linear-gradient(
+          103.75deg,
+          rgba(255, 255, 255, 0.192) 0.75%,
+          rgba(255, 255, 255, 0.18) 0.76%,
+          rgba(196, 196, 196, 0.24) 80%
+        );
+      }
+
       .flag {
         img {
           width: 60px !important;
