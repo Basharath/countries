@@ -3,7 +3,7 @@ $primary_hover: hsl(208, 100%, 40%);
 $dark: #262626;
 $black: #2c2f34;
 $secondary: #0cc8f2;
-$secondary_hover: hsl(25, 94%, 58%);
+$secondary_hover: hsl(191, 91%, 40%);
 // $background: #303a40;
 $background: #25343c;
 $light: #ccc;
@@ -53,17 +53,17 @@ body {
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: $lightBackground;
+    background: $primary;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: $primary;
+    background: $secondary;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: $primary_hover;
+    background: $secondary_hover;
   }
 }
 
