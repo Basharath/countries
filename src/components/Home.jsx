@@ -50,6 +50,15 @@ export default function Home() {
       const alternate = all.filter((i) =>
         i.name.toLowerCase().includes(searchText.toLowerCase())
       );
+
+      if (!alternate.length) {
+        const capitalWise = all.filter((i) =>
+          i.capital.toLowerCase().includes(searchText.toLowerCase())
+        );
+
+        return capitalWise;
+      }
+
       return alternate;
     }
 
