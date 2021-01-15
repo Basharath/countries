@@ -166,6 +166,11 @@
   body {
     padding: 20px;
     padding-top: 30px;
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: transparent !important;
+    }
   }
 
   .dashboard {
