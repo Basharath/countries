@@ -1,0 +1,40 @@
+<svg width="1440" height="856" viewBox="0 0 1440 856" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="1440" height="856" transform="translate(1440 856) rotate(-180)" fill="#056CF2"/>
+<g clip-path="url(#clip1)">
+<path d="M869 856L-3.05176e-05 856L-0.000149325 366L869 366L869 856Z" fill="#056CF2"/>
+<path d="M-0.00013388 429.7L-3.05176e-05 856L756.03 856L-0.00013388 429.7Z" fill="url(#paint0_linear)"/>
+<g filter="url(#filter0_f)">
+<path d="M529.221 429.7C257.224 480.905 -0.00013388 429.7 -0.00013388 429.7C-0.00013388 429.7 275.907 610.51 378.015 660C484.033 711.205 756.03 856 756.03 856C756.03 856 468.825 600.22 529.221 429.7Z" fill="black" fill-opacity="0.14"/>
+</g>
+<path d="M620.031 506.385C257.224 506.385 -0.00013388 429.7 -0.00013388 429.7C-0.00013388 429.7 182.49 592.135 325.44 672.985C468.391 753.835 756.03 856 756.03 856C756.03 856 620.031 702.63 620.031 506.385Z" fill="url(#paint1_linear)"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f" x="-88.8001" y="340.9" width="933.63" height="603.9" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="44.4" result="effect1_foregroundBlur"/>
+</filter>
+<linearGradient id="paint0_linear" x1="382.36" y1="640.4" x2="197.876" y2="967.576" gradientUnits="userSpaceOnUse">
+<stop stop-color="#033C88"/>
+<stop offset="1" stop-color="#0460D7"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="325.875" y1="669.8" x2="531.642" y2="340.194" gradientUnits="userSpaceOnUse">
+<stop stop-color="#077088"/>
+<stop offset="0.09" stop-color="#088CA9"/>
+<stop offset="0.18" stop-color="#099EBF"/>
+<stop offset="0.31" stop-color="#0AACD0"/>
+<stop offset="0.44" stop-color="#0BB6DC"/>
+<stop offset="0.59" stop-color="#0BBEE6"/>
+<stop offset="0.75" stop-color="#0CC4ED"/>
+<stop offset="1" stop-color="#0CC8F2"/>
+</linearGradient>
+<clipPath id="clip0">
+<rect width="1440" height="856" fill="white" transform="translate(1440 856) rotate(-180)"/>
+</clipPath>
+<clipPath id="clip1">
+<rect width="869" height="490" fill="white" transform="matrix(1 -1.36718e-07 -2.42464e-07 -1 -3.05176e-05 856)"/>
+</clipPath>
+</defs>
+</svg>
