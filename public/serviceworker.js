@@ -14,16 +14,6 @@ self.addEventListener('install', (e) => {
   );
 });
 
-// Listen fo requests
-self.addEventListener('fetch', (e) => {
-  e.respondWith(
-    caches.match(e.request).then((response) => {
-      if (response) return response;
-      return fetch(e.request).catch(() => caches.match('offline.html'));
-    })
-  );
-});
-
 // Activate the SW
 self.addEventListener('activate', (e) => {
   const cacheWhitelist = [];
@@ -39,5 +29,15 @@ self.addEventListener('activate', (e) => {
         })
       )
     )
+  );
+});
+
+// Listen fo requests
+self.addEventListener('fetch', (e) => {
+  e.respondWith(
+    caches.match(e.request).then((response) => {
+      if (response) return response;
+      return fetch(e.request).catch(() => caches.match('offline.html'));
+    })
   );
 });
