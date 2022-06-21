@@ -57,7 +57,7 @@ export default function Country({ singleCountry = '', allCountries }) {
             </div>
             <div className="borders">
               <span className="label">Border countries:</span>{' '}
-              {country.borders.map((b, idx) => (
+              {country.borders?.map((b, idx) => (
                 <span
                   className="border"
                   key={idx}
